@@ -12,6 +12,20 @@ x = torch.tensor([[1.0], [2.0], [3.0], [4.0]])
 y = torch.tensor([[2.0], [4.0], [6.0], [8.0]])
 
 # Define the model
+# GENERAL TEMPLATE for any nn.Module-based network:
+#
+# class AnyModel(nn.Module):
+#     def __init__(self):
+#         # define your layers here (just creates them, doesn't use them yet)
+#
+#     def forward(self, x):
+#         # define the ORDER in which data passes through those layers
+#         # return the final result
+#
+# __init__ creates the tools (layers). forward defines how you USE
+# those tools, in what order, on incoming data.
+
+
 class SimpleModel(nn.Module):
     def __init__(self):
         super().__init__()
